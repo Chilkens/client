@@ -3,10 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
     "bootstrap": "^3.3.7",
     "express": "^4.15.3",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.1",
+=======
+    "express": "^4.15.3",
+    "react": "^15.6.1",
+>>>>>>> e0f6ee56765893110cb71745cc55dc2e56ec4591
     "react-dom": "^15.6.1"
   },
   "devDependencies": {
