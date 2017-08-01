@@ -14,13 +14,14 @@ class routes extends PureComponent{
         return(
             <Router history={browserHistory}>
                 <Route path='/'>
-                    <IndexRoute component={IndexContainer} />
+                    <IndexRoute component={Login} />
                     <Route path='list' component={TimeListContainer} />
                     <Route path='form' component={MakeTimeTableContainer} />
+                    <Route path='login' component={IndexContainer} />
                     <Route path='select' component={SelectTimeContainer} />
-                    <Route path='login' component={Login} />
                 </Route>
             </Router>
+            //route login and indexroutes must be changed
         );
     }
 }
