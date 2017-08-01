@@ -1,0 +1,10 @@
+.btn-info {
+	border-radius: 0;
+	background-color: #FFFFFF;
+}
+
+.btn-custom {
+	background-color: #FFFFFF;
+	border-color: #FFFFFF;
+	font-size: 1rem;
+}

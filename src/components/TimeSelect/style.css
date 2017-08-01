@@ -1,0 +1,6 @@
+.row-fluid {
+	white-space: nowrap;
+}
+.row-fluid .col-xs-2 {
+	display: inline-block;
+}
