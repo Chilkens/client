@@ -11,8 +11,8 @@ class IndexContainer extends Component{
 
         return(
             <Title
-                title="TIME PICKER"
-                content="Time Picker로 약속시간을 편하게 정해보세요"
+                title={"TIME PICKER"}
+                content={"Time Picker로 약속시간을 편하게 정해보세요"}
             />
         );
     }

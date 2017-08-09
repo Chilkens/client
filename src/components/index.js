@@ -1,4 +1,4 @@
-
+import Index from './Index';
 import Title from './Title';
 import TimeTableItem from './TimeTableItem';
 
@@ -10,6 +10,7 @@ import TimeSelect from './TimeSelect';
 import Login from './Login';
 
 export {
+    Index,
     Title,
     TimeTableItem,
 
@@ -17,5 +18,5 @@ export {
     FormElement,
 
     TimeSelect,
-    Login,
+    Login
 };

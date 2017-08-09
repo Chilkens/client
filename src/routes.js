@@ -3,7 +3,7 @@ import {Router, Route, browserHistory, IndexRoute} from 'react-router';
 
 import {IndexContainer, TimeListContainer} from './containers';
 import {MakeTimeTableContainer, SelectTimeContainer} from './containers';
-import {Login} from './components';
+import {Login, Index} from './components';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -14,10 +14,10 @@ class routes extends PureComponent{
         return(
             <Router history={browserHistory}>
                 <Route path='/'>
-                    <IndexRoute component={Login} />
+                    <IndexRoute component={Index} />
                     <Route path='list' component={TimeListContainer} />
                     <Route path='form' component={MakeTimeTableContainer} />
-                    <Route path='login' component={IndexContainer} />
+                    <Route path='login' component={Login} />
                     <Route path='select' component={SelectTimeContainer} />
                 </Route>
             </Router>
