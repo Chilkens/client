@@ -8,6 +8,14 @@ class TimeListContainer extends Component{
 
     constructor(props){
         super(props);
+
+        this.state = {
+            timeList : [],
+        };
+    }
+
+    componentDidMount(){
+        
     }
 
     render(){

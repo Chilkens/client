@@ -7,50 +7,6 @@ class TimeTableItem extends PureComponent{
     render(){
 
         return(
-            /*
-            <div>
-                <div className='col-md-3 flex-column align-items-start'>
-                    <div className="d-flex w-100 justify-content-between">
-                        <h4 className='pull-right'>진행중</h4>
-                        <h3>췰킨스 팀모임 1차</h3>
-                    </div>
-                    <div>
-                        <p>7월 20일(수) ~ 7월 26일(화)</p>
-                    </div>
-                    <hr className='my-4' />
-                </div>
-                <div className='col-md-3 flex-column align-items-start'>
-                    <div className="d-flex w-100 justify-content-between">
-                        <h4 className='pull-right'>진행중</h4>
-                        <h3>췰킨스 팀모임 1차</h3>
-                    </div>
-                    <div>
-                        <p>7월 20일(수) ~ 7월 26일(화)</p>
-                    </div>
-                    <hr className='my-4' />
-                </div>
-                <div className='col-md-3 flex-column align-items-start'>
-                    <div className="d-flex w-100 justify-content-between">
-                        <h4 className='pull-right'>진행중</h4>
-                        <h3>췰킨스 팀모임 1차</h3>
-                    </div>
-                    <div>
-                        <p>7월 20일(수) ~ 7월 26일(화)</p>
-                    </div>
-                    <hr className='my-4' />
-                </div>
-                <div className='col-md-3 flex-column align-items-start'>
-                    <div className="d-flex w-100 justify-content-between">
-                        <h4 className='pull-right'>진행중</h4>
-                        <h3>췰킨스 팀모임 1차</h3>
-                    </div>
-                    <div>
-                        <p>7월 20일(수) ~ 7월 26일(화)</p>
-                    </div>
-                    <hr className='my-4' />
-                </div>
-            </div>
-            */
             <div className="list-group">
                 <a href="#" className="list-group-item list-group-item-action flex-column align-items-start">
                     <div className="d-flex w-100 justify-content-between">
@@ -77,7 +33,7 @@ class TimeTableItem extends PureComponent{
                     <small className="text-muted">Donec id elit non mi porta.</small>
                 </a>
             </div>
-            
+
         );
     }
 }

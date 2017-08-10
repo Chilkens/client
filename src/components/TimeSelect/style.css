@@ -4,3 +4,9 @@
 .row-fluid .col-xs-2 {
 	display: inline-block;
 }
+
+.btn-gray {
+	background-color: #acb8b4;
+	border-color: #FFFFFF;
+	border-radius: 0;
+}
