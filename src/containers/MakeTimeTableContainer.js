@@ -20,7 +20,7 @@ class MakeTimeTableContainer extends Component {
 	}
 
 	componentDidMount(){
-		
+
 	}
 
 	AddPersonCount() {
@@ -55,6 +55,8 @@ class MakeTimeTableContainer extends Component {
 
 		e.preventDefault();
 		const TimeTable = Object.assign({}, this.state);
+
+		alert(`${TimeTable.personCount}명 ${TimeTable.timeCount}시간 설정!!`);
 	}
 
 	render() {
