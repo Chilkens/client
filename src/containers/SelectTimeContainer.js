@@ -24,6 +24,7 @@ class SelectTimeContainer extends Component {
             timeDiff : 0,
             selecTimeResult : [],
         };
+        this.addTimeToClick = this.addTimeToClick.bind(this);
 	}
 
     async componentDidMount(){
@@ -67,6 +68,23 @@ class SelectTimeContainer extends Component {
 
     }
 
+    addTimeToClick(id, time){
+
+        let stateCopy = Object.assign({}, this.state);
+        let currentTime = String(Object.keys(stateCopy.selecTimeResult[id]));
+
+        let currentIndex = stateCopy.selecTimeResult[id][currentTime];
+        console.log(currentTime);
+        //if(currentIndex){
+        //}else{
+            stateCopy.selecTimeResult[id][currentTime].push(time);
+            console.log(stateCopy.selecTimeResult[id][currentTime]);
+            this.setState(stateCopy);
+        //}
+
+    }
+
+
 	render() {
 		return(
 			<div>
@@ -78,6 +96,7 @@ class SelectTimeContainer extends Component {
 				<TimeSelect
 					times = {this.state.selecTimeResult}
                     count = {this.state.timeDiff}
+                    addTimeToClick = {this.addTimeToClick}
                     />
 
 			</div>

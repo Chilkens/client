@@ -14,6 +14,7 @@ export default class TimeSelectMain extends PureComponent{
                             key={index}
                             count={item}
                             counts={this.props.counts}
+                            addTimeToClick={this.props.addTimeToClick}
                         />
                     )
                 })}

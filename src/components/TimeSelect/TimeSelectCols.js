@@ -8,7 +8,9 @@ export default class TimeSelectCols extends PureComponent{
             <tr>
                 {this.props.counts.map((item, index) => {
                     return(
-                        <td>{this.props.count}</td>
+                        <td onClick={(e) => {
+                            this.props.addTimeToClick(index, this.props.count)
+                        }}>{this.props.count}</td>
                     );
                 })}
             </tr>
