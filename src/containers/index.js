@@ -1,6 +1,3 @@
-
-'use strict';
-
 import IndexContainer from './IndexContainer';
 import TimeListContainer from './TimeListContainer';
 import MakeTimeTableContainer from './MakeTimeTableContainer';

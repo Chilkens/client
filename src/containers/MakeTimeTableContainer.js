@@ -23,6 +23,7 @@ class MakeTimeTableContainer extends Component {
 	}
 
 	componentDidMount(){
+
 	}
 
 	onChange(e){
@@ -76,7 +77,7 @@ class MakeTimeTableContainer extends Component {
 			});
 
 			SaveTimeTable(timeTable)
-			.then(response => console.log(response))
+			.then(response => console.log(response.data))
 			.catch(error => console.log(error));
 		}else{
 			console.log("제목을 입력하세요");

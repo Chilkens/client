@@ -1,6 +1,3 @@
-
-"use strict";
-
 import React, { PureComponent } from 'react';
 
 class FormTitle extends PureComponent{
