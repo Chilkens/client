@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router';
 
 import {Title, TimeTableItem} from '../components';
-
+import {GetTimeTableList} from '../lib/toServer';
 
 class TimeListContainer extends Component{
 
@@ -15,7 +15,13 @@ class TimeListContainer extends Component{
     }
 
     componentDidMount(){
-        
+        GetTimeTableList('장호동')
+        .then(response => {
+            this.setState({
+                timeList : response.data,
+            });
+        })
+        .catch(error => console.log(error));
     }
 
     render(){
@@ -28,7 +34,9 @@ class TimeListContainer extends Component{
                     />
                 <div className='container'>
                     <div className='row'>
-                        <TimeTableItem />
+                        <TimeTableItem
+                            timeList={this.state.timeList}
+                        />
                     </div>
                 </div>
                 <footer>

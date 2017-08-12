@@ -18,7 +18,7 @@ class routes extends PureComponent{
                     <Route path='list' component={TimeListContainer} />
                     <Route path='form' component={MakeTimeTableContainer} />
                     <Route path='login' component={Login} />
-                    <Route path='select' component={SelectTimeContainer} />
+                    <Route path='select/:id' component={SelectTimeContainer} />
                 </Route>
             </Router>
             //route login and indexroutes must be changed

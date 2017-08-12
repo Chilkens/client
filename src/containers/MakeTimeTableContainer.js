@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Title, FormElement, FormTitle } from '../components';
+import {SaveTimeTable} from '../lib/toServer';
 
 class MakeTimeTableContainer extends Component {
+
 	constructor(props) {
 		super(props);
 
@@ -16,10 +18,19 @@ class MakeTimeTableContainer extends Component {
 		this.MinusPersonCount = this.MinusPersonCount.bind(this);
 		this.AddTimeCount = this.AddTimeCount.bind(this);
 		this.MinusTimeCount = this.MinusTimeCount.bind(this);
+		this.onChange = this.onChange.bind(this);
 		this.onSubmit = this.onSubmit.bind(this);
 	}
 
 	componentDidMount(){
+	}
+
+	onChange(e){
+
+		e.preventDefault();
+		this.setState({
+			title : e.target.value,
+		});
 
 	}
 
@@ -54,9 +65,23 @@ class MakeTimeTableContainer extends Component {
 	onSubmit(e){
 
 		e.preventDefault();
-		const TimeTable = Object.assign({}, this.state);
+		if(this.state.title){
+			const timeTable = Object.assign({}, {
+				title : this.state.title,
+				time : this.state.timeCount,
+				max : this.state.personCount,
+				createdBy : '장호동',
+				start : '2017-08-03',
+				end : '2017-08-09',
+			});
 
-		alert(`${TimeTable.personCount}명 ${TimeTable.timeCount}시간 설정!!`);
+			SaveTimeTable(timeTable)
+			.then(response => console.log(response))
+			.catch(error => console.log(error));
+		}else{
+			console.log("제목을 입력하세요");
+		}
+
 	}
 
 	render() {
@@ -68,6 +93,7 @@ class MakeTimeTableContainer extends Component {
 				/>
 				<FormTitle
 					title='타임테이블 이름'
+					onChange={this.onChange}
 				/>
 				<FormElement
 					AddPersonCount={this.AddPersonCount}
