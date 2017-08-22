@@ -17,7 +17,6 @@ class TimeListContainer extends Component{
     componentWillMount(){
 
         if(window.localStorage){
-
             if(localStorage.kaccount_email){
                 console.log("로그인 되았음");
             }
@@ -25,6 +24,8 @@ class TimeListContainer extends Component{
     }
 
     componentDidMount(){
+        console.log(localStorage.kaccount_email);
+
         GetTimeTableList(localStorage.kaccount_email)
         .then(response => {
             this.setState({
