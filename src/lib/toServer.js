@@ -9,7 +9,7 @@ export function SaveTimeTable(timeTableData){
 
 export function GetTimeTableList(access_token){
 
-    return axios.get(`${kUrl}/api/v1/historyProg?kakaoId=${access_token}`);
+    return axios.get(`${kUrl}/api/v1/historyFin?kakaoId=${access_token}`);
 }
 
 export function getTimeTableByUrl(url){

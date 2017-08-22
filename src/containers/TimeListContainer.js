@@ -24,7 +24,6 @@ class TimeListContainer extends Component{
     }
 
     componentDidMount(){
-        console.log(localStorage.kaccount_email);
 
         GetTimeTableList(localStorage.kaccount_email)
         .then(response => {
