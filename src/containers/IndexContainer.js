@@ -12,12 +12,14 @@ class IndexContainer extends Component{
     }
 
     componentWillMount() {
-
-
+        if(localStorage.kaccount_email){
+            window.location.href = window.location.href + 'list';
+        }
     }
 
     componentDidMount(){
-        
+
+
     }
 
     loadScript(src){

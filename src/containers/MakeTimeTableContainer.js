@@ -77,7 +77,9 @@ class MakeTimeTableContainer extends Component {
 			});
 
 			SaveTimeTable(timeTable)
-			.then(response => console.log(response.data))
+			.then(response => {
+				window.location.href = window.location.href.replace('form', 'list');
+			})
 			.catch(error => console.log(error));
 		}else{
 			console.log("제목을 입력하세요");
