@@ -3,7 +3,6 @@ import {Link} from 'react-router';
 
 import {Title, TimeTableItem} from '../components';
 import {GetTimeTableList} from '../lib/toServer';
-import {getKaKaoProfile} from '../lib/toServer';
 
 class TimeListContainer extends Component{
 
@@ -19,9 +18,6 @@ class TimeListContainer extends Component{
 
     componentWillMount(){
 
-        getKaKaoProfile('dR_7Ajr1L0mWydH3dJZJCneZCJL0aQyQ0Z64JgopdkgAAAFeCKKFMA')
-        .then(response => console.log(response))
-        .catch(error => console.log(error));
     }
 
     componentDidMount(){

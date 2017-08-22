@@ -17,7 +17,7 @@ class IndexContainer extends Component{
     }
 
     componentDidMount(){
-        //Kakao.init();
+        
     }
 
     loadScript(src){
