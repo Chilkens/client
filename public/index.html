@@ -63,6 +63,7 @@
                         success: function(res) {
                             if(window.localStorage){
                                 localStorage.kaccount_email = res.kaccount_email;
+                                localStorage.nickname = res.nickname;
                                 localStorage.uuid = res.uuid
                                 localStorage.profile_image = res.profile_image;
                             }

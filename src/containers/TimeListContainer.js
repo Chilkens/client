@@ -18,10 +18,16 @@ class TimeListContainer extends Component{
 
     componentWillMount(){
 
+        if(window.localStorage){
+            this.setState({
+                kaccount_email : localStorage.kaccount_email,
+                nickname : localStorage.nickname,
+            });
+        }
     }
 
     componentDidMount(){
-        GetTimeTableList('장호동')
+        GetTimeTableList(this.state.kaccount_email)
         .then(response => {
             this.setState({
                 timeList : response.data,
