@@ -45,6 +45,7 @@
     <script>
         if(window.location.href.split('/')[3] === ''){
             $(document).ready(kakaoInit);
+
         }else{
 
         }
@@ -57,10 +58,19 @@
               Kakao.Auth.createLoginButton({
                 container: '#kakao-login-btn',
                 success: function(authObj) {
-                  alert(JSON.stringify(authObj));
+                    let access_token = authObj.access_token;
+                    let refresh_token = authObj.refresh_token;
+
+                    if(window.localStorage){
+                        localStorage.access_token = access_token;
+                        localStorage.refresh_token = refresh_token;
+                    }
+                    window.location.href = window.location.href + 'list';
                 },
+
                 fail: function(err) {
-                   alert(JSON.stringify(err));
+                    alert("로그인 오류입니다. 다시해주세요!!");
+                    window.location.href = window.location.href + 'list';
                 }
               });
         }

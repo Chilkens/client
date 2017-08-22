@@ -16,3 +16,16 @@ export function getTimeTableByUrl(url){
 
     return axios.get(`${kUrl}/api/v1/timetable/select/${url}`);
 }
+
+export function getKaKaoProfile(access_token){
+
+    const authOptions = {
+        method : 'GET',
+        url : 'https://kapi.kakao.com/v1/user/me',
+        headers: {
+        'Authorization': 'Bearer ' + access_token,
+        'Content-Type': 'application/x-www-form-urlencoded'
+        },
+    };
+    return axios(authOptions);
+}
