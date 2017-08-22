@@ -27,7 +27,6 @@ class MakeTimeTableContainer extends Component {
 	}
 
 	onChange(e){
-
 		e.preventDefault();
 		this.setState({
 			title : e.target.value,
@@ -66,6 +65,7 @@ class MakeTimeTableContainer extends Component {
 	onSubmit(e){
 
 		e.preventDefault();
+
 		if(this.state.title){
 			const timeTable = Object.assign({}, {
 				title : this.state.title,

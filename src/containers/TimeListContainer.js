@@ -23,6 +23,9 @@ class TimeListContainer extends Component{
                 kaccount_email : localStorage.kaccount_email,
                 nickname : localStorage.nickname,
             });
+
+            console.log(this.state.kaccount_email);
+            conosle.log(localStorage);
         }
     }
 

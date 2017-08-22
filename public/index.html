@@ -61,12 +61,14 @@
                     Kakao.API.request({
                         url: '/v1/user/me',
                         success: function(res) {
+                            console.log(res);
                             if(window.localStorage){
                                 localStorage.kaccount_email = res.kaccount_email;
                                 localStorage.nickname = res.nickname;
                                 localStorage.uuid = res.uuid
                                 localStorage.profile_image = res.profile_image;
                             }
+                            alert(localStorage.kaccount_email);
                             window.location.href = window.location.href + 'list';
                         },
                         fail: function(error) {
