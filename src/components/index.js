@@ -1,7 +1,7 @@
 import Index from './Index';
 import Title from './Title';
 import TimeTableItem from './TimeTableItem';
-
+import LoginButton from './Login/LoginButton';
 import FormTitle from './Form/FormTitle';
 import FormElement  from './Form/FormElement';
 
@@ -18,5 +18,6 @@ export {
     FormElement,
 
     TimeSelect,
-    Login
+    Login,
+    LoginButton,
 };

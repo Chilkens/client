@@ -9,7 +9,6 @@ export default class Index extends PureComponent{
     render(){
 
         return(
-            <div>
                 <section>
                     <div className="container">
                         <div className="image-bg-fluid-height">
@@ -24,12 +23,6 @@ export default class Index extends PureComponent{
                     </div>
                 </section>
 
-                <footer>
-                   <div className="navbar-fixed-bottom">
-                        <Link to ='/list'><h1 className="section-heading text-center">카카오톡 아이디로 로그인</h1></Link>
-                   </div>
-                 </footer>
-            </div>
         );
     }
 }

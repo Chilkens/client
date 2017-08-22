@@ -14,10 +14,9 @@ class routes extends PureComponent{
         return(
             <Router history={browserHistory}>
                 <Route path='/'>
-                    <IndexRoute component={Index} />
+                    <IndexRoute component={IndexContainer} />
                     <Route path='list' component={TimeListContainer} />
                     <Route path='form' component={MakeTimeTableContainer} />
-                    <Route path='login' component={Login} />
                     <Route path='select/:id' component={SelectTimeContainer} />
                 </Route>
             </Router>

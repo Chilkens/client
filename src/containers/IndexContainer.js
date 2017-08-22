@@ -1,19 +1,55 @@
 import React, {Component} from 'react';
-import {Title} from '../components';
+import {Index, LoginButton} from '../components';
+
 
 class IndexContainer extends Component{
 
     constructor(props){
         super(props);
+
+        this.kakaoLoginSucess = this.kakaoLoginSucess.bind(this);
+        this.kakaoLoginFailure = this.kakaoLoginFailure.bind(this);
+    }
+
+    componentWillMount() {
+
+
+    }
+
+    componentDidMount(){
+        //Kakao.init();
+    }
+
+    loadScript(src){
+
+        const tag = document.createElement('script');
+        tag.async = false;
+        tag.src = src;
+        document.getElementsByTagName('body').appendChild(tag);
+    }
+
+    kakaoLoginSucess(response){
+
+        console.log(response);
+    }
+
+    kakaoLoginFailure(error){
+
+        console.log(error);
+    }
+
+    onClick(e){
+        e.preventDefault();
+
     }
 
     render(){
 
         return(
-            <Title
-                title={"TIME PICKER"}
-                content={"Time Picker로 약속시간을 편하게 정해보세요"}
-            />
+            <div>
+                <Index />
+                <LoginButton/>
+            </div>
         );
     }
 }

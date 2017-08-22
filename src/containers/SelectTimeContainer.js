@@ -73,15 +73,22 @@ class SelectTimeContainer extends Component {
         let stateCopy = Object.assign({}, this.state);
         let currentTime = String(Object.keys(stateCopy.selecTimeResult[id]));
 
-        let currentIndex = stateCopy.selecTimeResult[id][currentTime];
-        console.log(currentTime);
-        //if(currentIndex){
-        //}else{
-            stateCopy.selecTimeResult[id][currentTime].push(time);
-            console.log(stateCopy.selecTimeResult[id][currentTime]);
+        let currentIndex = stateCopy.selecTimeResult[id][currentTime].indexOf(time);
+        if(currentIndex >= 0){
+            stateCopy.selecTimeResult[id][currentTime].splice(currentIndex, 1);
             this.setState(stateCopy);
-        //}
+            console.log(stateCopy.selecTimeResult[id]);
+        }else{
+            stateCopy.selecTimeResult[id][currentTime].push(time);
+            this.setState(stateCopy);
+            console.log(stateCopy.selecTimeResult[id]);
+        }
 
+    }
+
+    onSubmit(){
+
+        console.log(this.state.selecTimeResult[0]);
     }
 
 
