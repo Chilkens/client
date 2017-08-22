@@ -20,13 +20,10 @@ class TimeListContainer extends Component{
 
         if(window.localStorage){
 
-
-            console.log(localStorage.kaccount_email);
-
             this.setState({
                 kaccount_email : localStorage.kaccount_email
             });
-
+            console.log(this.state);
         }
     }
 
