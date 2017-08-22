@@ -61,7 +61,7 @@
                     Kakao.API.request({
                         url: '/v1/user/me',
                         success: function(res) {
-                            console.log(res);
+                            alert(res);
                             if(window.localStorage){
                                 localStorage.kaccount_email = res.kaccount_email;
                                 localStorage.nickname = res.nickname;
