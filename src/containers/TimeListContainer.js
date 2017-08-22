@@ -11,8 +11,6 @@ class TimeListContainer extends Component{
 
         this.state = {
             timeList : [],
-            kaccount_email : '',
-            nickname : '',
         };
     }
 
@@ -20,15 +18,14 @@ class TimeListContainer extends Component{
 
         if(window.localStorage){
 
-            this.setState({
-                kaccount_email : localStorage.kaccount_email
-            });
-            console.log(this.state);
+            if(localStorage.kaccount_email){
+                console.log("로그인 되았음");
+            }
         }
     }
 
     componentDidMount(){
-        GetTimeTableList(this.state.kaccount_email)
+        GetTimeTableList(localStorage.kaccount_email)
         .then(response => {
             this.setState({
                 timeList : response.data,
