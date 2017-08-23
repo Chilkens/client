@@ -73,7 +73,7 @@ class MakeTimeTableContainer extends Component {
 				max : this.state.personCount,
 				createdBy : localStorage.kaccount_email,
 				start : '2017-08-03',
-				end : '2017-08-09',
+				end : '2017-08-07',
 			});
 
 			SaveTimeTable(timeTable)

@@ -33,7 +33,6 @@ class SelectTimeContainer extends Component {
         await getTimeTableByUrl(url)
         .then(response => {
             this.setState({timeTable : response.data});
-            console.log(this.state.timeTable.current);
         })
         .catch(error => console.log(error));
 
@@ -50,6 +49,7 @@ class SelectTimeContainer extends Component {
         let endDate = Moment(this.state.timeTable.end);
 
         this.setState({timeDiff : endDate.diff(startDate, 'days')});
+
     }
 
     makeTimeSelectList(){
@@ -97,7 +97,7 @@ class SelectTimeContainer extends Component {
 
         let resultSubmit = Object.assign({}, {
             pick : {
-                createdBy : "호동",
+                createdBy : "테스트봇(호동꺼)",
             },
             pickDetailList : result,
         });
