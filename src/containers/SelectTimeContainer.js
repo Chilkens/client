@@ -8,6 +8,10 @@ const time = [{'time':9}, {'time':10},	{'time':11}, {'time': 12}, {'time':13}, {
  							{'time': 15}, {'time': 16}, {'time': 17}, {'time': 18}, {'time':19},
 							{'time':20}, {'time':21}, {'time':22}, {'time':23}];
 
+const colorStyle = {
+  backgroundColor: '#6cee80'
+};
+
 class SelectTimeContainer extends Component {
 	constructor(props) {
 		super(props);
@@ -42,6 +46,7 @@ class SelectTimeContainer extends Component {
             selecTimeResult : this.makeTimeSelectList(),
         });
 
+      	document.body.style.background= "linearGradient(-120deg, #82B7EE, #3EB8E4)";
     }
 
     calculateTimeDiff(){
@@ -68,7 +73,7 @@ class SelectTimeContainer extends Component {
 
     }
 
-    addTimeToClick(id, time){
+    addTimeToClick(e, id, time){
 
         let stateCopy = Object.assign({}, this.state);
         let currentTime = String(Object.keys(stateCopy.selecTimeResult[id]));
@@ -83,6 +88,8 @@ class SelectTimeContainer extends Component {
             this.setState(stateCopy);
             console.log(stateCopy.selecTimeResult[id]);
         }
+        {e.target.style.backgroundColor == 'rgb(108, 238, 128)' ? e.target.style.backgroundColor=''
+                                                                : e.target.style.backgroundColor='rgb(108, 238, 128)'};
 
     }
 
@@ -101,7 +108,7 @@ class SelectTimeContainer extends Component {
 				/>
 
 				<TimeSelect
-					times = {this.state.selecTimeResult}
+					          times = {this.state.selecTimeResult}
                     count = {this.state.timeDiff}
                     addTimeToClick = {this.addTimeToClick}
                     />

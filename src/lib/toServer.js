@@ -14,7 +14,7 @@ export function GetTimeTableList(access_token){
 
 export function getTimeTableByUrl(url){
 
-    return axios.get(`${kUrl}/api/v1/timetable/select/${url}`);
+    return axios.get(`${kUrl}/api/v1/timetable/find?keyUrl=${url}`);
 }
 
 export function getKaKaoProfile(access_token){

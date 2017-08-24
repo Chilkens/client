@@ -2,6 +2,9 @@ import React, {PureComponent} from 'react';
 import TimeItem from './TimeItem';
 
 class TimeTableItem extends PureComponent{
+    componentDidMount(){
+  		document.body.style.background= "linear-gradient(#948DF3, #5A78EC)";
+  	}
 
     render(){
 

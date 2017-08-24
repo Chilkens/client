@@ -1,0 +1,91 @@
+body {
+  background: linear-gradient(-120deg, #82B7EE, #3EB8E4);
+  font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+}
+
+.jumbotron {
+  background-color: rgba(255,255,255, 0);
+  color: #ffffff;
+}
+
+.jumbotron h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 1.5rem;
+}
+
+.no-marginBottom {
+  margin-Bottom: 0px;
+}
+
+.no-marginTop {
+  margin-top: 0px;
+}
+
+.has-marginTop {
+  margin-top: 30px;
+}
+
+.btn-bottom {
+  background-color: rgba(255,255, 255, 0.3);
+  height: 50px;
+  margin: 0px;
+}
+
+.white-letter {
+  color: white;
+  font-weight: bold;
+}
+
+.white-letter.dim-letter {
+  color: rgba(208, 216, 231, 0.8);
+}
+
+/*failList*/
+.failH1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+  color: #ffffff;
+  margin-top: 0px;
+}
+
+/*form css*/
+.btn-info {
+	border-radius: 0;
+	background-color: #FFFFFF;
+	color: #5bc0de;
+}
+
+.form-gray-text {
+	color: #848f8c;
+}
+
+.form-btn {
+	padding: 0.3rem 2rem;
+	font-size: 2rem;
+}
+
+.plus {
+	border-color: #5bc0de #5bc0de #5bc0de #5bc0de;
+}
+
+.minus {
+	border-color: #5bc0de #FFFFFF #5bc0de #5bc0de;
+}
+
+.edit-btn {
+	color: #000000;
+	font-size: 1rem;
+	border-color: #FFFFFF;
+}
+
+.btn-gray {
+	background-color: #acb8b4;
+	border-color: #FFFFFF;
+	border-radius: 0;
+}

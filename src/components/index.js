@@ -1,4 +1,4 @@
-import Index from './Index';
+import Index from './Index/';
 import Title from './Title';
 import TimeTableItem from './TimeTableItem';
 import LoginButton from './Login/LoginButton';
@@ -8,6 +8,8 @@ import FormElement  from './Form/FormElement';
 import TimeSelect from './TimeSelect';
 
 import Login from './Login';
+
+import FailList from './FailList';
 
 export {
     Index,
@@ -20,4 +22,6 @@ export {
     TimeSelect,
     Login,
     LoginButton,
+
+    FailList
 };

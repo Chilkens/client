@@ -4,10 +4,11 @@ import TimeSelectHeader from './TimeSelectHeader';
 import TimeSelectMain from './TimeSelectMain';
 
 
-import './style.css';
-
 class TimeSelect extends PureComponent{
 
+	componentDidMount() {
+		console.log(this.counts);
+	}
 	render() {
 		let times = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24];
 		let counts = [3, 4, 5, 6, 7, 8, 9];
