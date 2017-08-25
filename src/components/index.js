@@ -9,7 +9,7 @@ import TimeSelect from './TimeSelect';
 
 import Login from './Login';
 
-import FailList from './FailList';
+import CommonTime from './CommonTime';
 import Share from './Share';
 import ConfirmTimeList from './ConfirmTimeList';
 
@@ -25,7 +25,8 @@ export {
     Login,
     LoginButton,
 
-    FailList,
     Share,
-    ConfirmTimeList
+    ConfirmTimeList,
+
+    CommonTime
 };

@@ -27,13 +27,6 @@ class FailListContainer extends Component{
 
       const hasIntersectionView = (
         <div>
-            <div className='jumbotron jumbotron-fluid'>
-                <div className='container'>
-                    <h1 className='display-3 no-marginBottom'>가장 많이 모일 수 있는</h1>
-                    <h1 className='display-3 no-marginTop'>시간입니다.</h1>
-                    <p className='lead has-marginTop'>가장 많은 멤버들이 모일 수 있는 시간을<br/>공유해 주세요.</p>
-                </div>
-            </div>
 
             <div className='container'>
                 <div className='row'>

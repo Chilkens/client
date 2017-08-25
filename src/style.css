@@ -105,3 +105,9 @@ body {
 .have-margin-right {
   margin-right: 20%;
 }
+
+/*confirm*/
+.list-group-item {
+  background-color: rgba(255,255,255,0);
+  border: 0px;
+}
