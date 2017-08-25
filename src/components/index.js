@@ -8,7 +8,6 @@ import FormElement  from './Form/FormElement';
 import TimeSelect from './TimeSelect';
 
 import Login from './Login';
-
 import CommonTime from './CommonTime';
 import Share from './Share';
 import EnableTime from './EnableTime';
@@ -26,6 +25,6 @@ export {
     LoginButton,
 
     Share,
-    EnableTime,
-    CommonTime
+    CommonTime,
+    EnableTime
 };

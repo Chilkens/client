@@ -149,3 +149,22 @@ th {
 section {
     padding-bottom: 150px;
 }
+
+.have-margin-left {
+    margin-left: 11%;
+}
+
+/*confirm*/
+a.list-group-item {
+  background-color: rgba(255,255,255,0);
+  border: 0px;
+  color: #ffffff;
+}
+
+.table > tbody > tr > td {
+    text-align: center;
+    border-top: transparent;
+}
+th {
+    text-align: center;
+}

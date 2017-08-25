@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 
 import { Title, CommonTime } from '../components';
 
-import { GetTimeTableList } from '../lib/toServer';
+import { getTimeTableByUrl } from '../lib/toServer';
 
 export default class CommonTimeContainer extends PureComponent {
 
@@ -16,13 +16,17 @@ export default class CommonTimeContainer extends PureComponent {
 
     componentDidMount(){
 
-        GetTimeTableList('장호동')
-        .then(response => {
-            this.setState({
-                timeList : response.data,
-            });
+        let url = this.props.location.pathname.split("/")[2];
+        getTimeTableByUrl(url)
+        .then((response) => {
+            if(response.data.max <= response.data.current){
+				let enableUrl = window.location.href.replace('common', 'enable');
+				window.location.href = enableUrl;
+			}else{
+				this.setState({timeList : response.data});
+			}
         })
-        .catch(error => console.log(error));
+        .catch((error) => console.log(error));
   }
 
 
@@ -38,9 +42,10 @@ export default class CommonTimeContainer extends PureComponent {
                   <div className="row">
                       <CommonTime
                           timeList={this.state.timeList} />
-                      </div>
                   </div>
               </div>
+          </div>
+
         );
     }
 }

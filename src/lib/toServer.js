@@ -32,6 +32,9 @@ export function getKaKaoProfile(access_token){
 
 export function SaveTimePickResult(keyUrl, data){
 
-    //console.log(`${kUrl}/api/v1/timepick/save?keyUrl=${keyUrl}`);
     return axios.post(`${kUrl}/api/v1/timepick/save?keyUrl=${keyUrl}`, data);
+}
+
+export function getIntersectionByUrl(url){
+    return axios.get(`${kUrl}/api/v1/intersection/find?keyUrl=${url}`);
 }

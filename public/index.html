@@ -45,11 +45,27 @@
   crossorigin="anonymous"></script>
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script>
-        if(window.location.href.split('/')[3] === ''){
+
+        let statusUrl = window.location.href.split('/')[3];
+
+        if(statusUrl === ''){
             $(document).ready(kakaoInit);
+        }else if(statusUrl === 'share'){
+
+            $(document).ready(function(){
+                $('#kakao-link-btn').click(kakaoSendUrl);
+            });
 
         }else{
 
+        }
+
+        function kakaoSendUrl(){
+
+            Kakao.init('cd1aa76dddc4d7cc7dc9cd29e3fbb6b9');
+            Kakao.Link.sendTalkLink({
+                label : window.location.href.replace('share', 'select')
+            });
         }
 
         function kakaoInit(){

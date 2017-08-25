@@ -1,24 +1,40 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
 
-import {EnableTime} from '../components';
-import {GetTimeTableList} from '../lib/toServer';
+
+import { EnableTime } from '../components';
+import { getIntersectionByUrl } from '../lib/toServer';
 
 class EnableTimeContainer extends Component{
     constructor(props){
         super(props);
 
         this.state = {
-            timeList : [],
+            intersection : {
+                date : '',
+                time : []
+            },
+            hasIntersection : false,
         };
     }
 
     componentDidMount(){
-        GetTimeTableList('장호동')
-        .then(response => {
-            this.setState({
-                timeList : response.data,
-            });
+        let url = this.props.location.pathname.split("/")[2];
+
+        getIntersectionByUrl(url)
+        .then((response) => {
+
+            if(response.data.intersection){
+                this.setState({
+                    intersection : response.data.intersection,
+                    hasIntersection : true,
+                });
+            }else{
+                this.setState({
+                    hasIntersection : false,
+                })
+            }
+
         })
         .catch(error => console.log(error));
     }
@@ -39,7 +55,7 @@ class EnableTimeContainer extends Component{
             <div className='container'>
                 <div className='row'>
                     <EnableTime
-                        timeList={this.state.timeList}
+                        intersection={this.state.intersection}
                     />
                 </div>
             </div>
@@ -60,7 +76,6 @@ class EnableTimeContainer extends Component{
                   <p className='lead has-marginTop'>모두가 가능한 시간이 없습니다.</p>
               </div>
           </div>
-
         </div>
       );
 
@@ -91,20 +106,42 @@ class EnableTimeContainer extends Component{
       );
 
 
-        return(
-          <div>
-            {this.props.hasIntersection ? hasIntersectionView : noIntersectionView}
+      const completeConfirmView = (
+        <div>
+            <div className='jumbotron jumbotron-fluid'>
+                <div className='container'>
+                    <h1 className='display-3 no-marginBottom'>모임시간 확정!</h1>
+                    <p className='lead has-marginTop'>확정된 모임시간을 공유해주세요</p>
+                </div>
+            </div>
+
+
+          <div className='container'>
+              <div className='row'>
+                  <EnableTime
+                      timeList={this.state.timeList}
+                  />
+              </div>
           </div>
-        );
+          <footer>
+             <div className="navbar-fixed-bottom">
+                  <Link to ='/#'><h1 className="section-heading text-center">공유하기</h1></Link>
+             </div>
+           </footer>
+        </div>
+      );
+
+      if(this.state.hasIntersection){
+          return(
+              hasIntersectionView
+          )
+      }else{
+          return(
+              noIntersectionView
+          )
+      }
+
     }
-}
-
-EnableTimeContainer.propTypes = {
-  hasIntersection: React.PropTypes.bool
-}
-
-EnableTimeContainer.defaultProps = {
-  hasIntersection: true
 }
 
 export default EnableTimeContainer;

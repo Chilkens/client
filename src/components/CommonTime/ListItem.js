@@ -10,7 +10,7 @@ export default class ListItem extends PureComponent{
                     <small className='pull-right'>진행중</small>
                     <h4 className="mb-1">{this.props.title}</h4>
                 </div>
-                <small className='pull-right'>3/5</small>
+                <small className='pull-right'>{this.props.confirmCount.current}/{this.props.confirmCount.max}</small>
                 <p className="mb-1">{this.props.period}</p>
                 <small>{this.props.member}</small>
             </a>

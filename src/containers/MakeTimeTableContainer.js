@@ -80,7 +80,10 @@ class MakeTimeTableContainer extends Component {
 			});
 
 			SaveTimeTable(timeTable)
-			.then(response => console.log(response.data))
+			.then(response => {
+				let shareUrl = window.location.href.replace('form', 'share') + `/${response.data.keyUrl}`;
+				window.location.href = shareUrl;
+			})
 			.catch(error => console.log(error));
 		}else{
 			console.log("제목을 입력하세요");

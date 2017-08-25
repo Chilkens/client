@@ -3,6 +3,8 @@ import {Router, Route, browserHistory, IndexRoute} from 'react-router';
 
 import {IndexContainer, TimeListContainer} from './containers';
 import {MakeTimeTableContainer, SelectTimeContainer} from './containers';
+import {CommonTimeContainer, EnableTimeContainer} from './containers';
+//import {FailListContainer} from './containers';
 import {Share} from './components';
 
 import {EnableTimeContainer} from './containers';
@@ -21,13 +23,12 @@ class routes extends PureComponent{
                     <Route path='list' component={TimeListContainer} />
                     <Route path='form' component={MakeTimeTableContainer} />
                     <Route path='select/:id' component={SelectTimeContainer} />
-                    <Route path='enabletime' component={EnableTimeContainer} />
-                    <Route path='share' component={Share} />
-                    <Route path='common' component={CommonTimeContainer} />
 
+                    <Route path='share/:id' component={Share} />
+                    <Route path='common/:id' component={CommonTimeContainer} />
+                    <Route path='enable/:id' component={EnableTimeContainer} />
                 </Route>
             </Router>
-            //route login and indexroutes must be changed
         );
     }
 }
