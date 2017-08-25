@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Title, FormElement, FormTitle } from '../components';
 import {SaveTimeTable} from '../lib/toServer';
+import { START_DATE, END_DATE } from 'react-dates/constants';
+import moment from 'moment';
 
 class MakeTimeTableContainer extends Component {
 
@@ -11,7 +13,8 @@ class MakeTimeTableContainer extends Component {
 			title : '',
 			personCount : 3,
 			timeCount : 3,
-			period : '7월 20일(수) ~ 7월 26일(화)'
+			startDate : null,
+			endDate : null,
 		};
 
 		this.AddPersonCount = this.AddPersonCount.bind(this);
@@ -20,6 +23,9 @@ class MakeTimeTableContainer extends Component {
 		this.MinusTimeCount = this.MinusTimeCount.bind(this);
 		this.onChange = this.onChange.bind(this);
 		this.onSubmit = this.onSubmit.bind(this);
+		this.onDatesChange = this.onDatesChange.bind(this);
+		this.onFocusChange = this.onFocusChange.bind(this);
+		this.isDayBlocked = this.isDayBlocked.bind(this);
 	}
 
 	componentDidMount(){
@@ -65,15 +71,14 @@ class MakeTimeTableContainer extends Component {
 	onSubmit(e){
 
 		e.preventDefault();
-
-		if(this.state.title){
+		if(this.state.title && this.state.startDate && this.state.endDate){
 			const timeTable = Object.assign({}, {
 				title : this.state.title,
 				time : this.state.timeCount,
 				max : this.state.personCount,
 				createdBy : localStorage.kaccount_email,
-				start : '2017-08-03',
-				end : '2017-08-07',
+				start : this.state.startDate.format().split('T')[0],
+				end : this.state.endDate.format().split('T')[0],
 			});
 
 			SaveTimeTable(timeTable)
@@ -83,9 +88,24 @@ class MakeTimeTableContainer extends Component {
 			})
 			.catch(error => console.log(error));
 		}else{
-			console.log("제목을 입력하세요");
+			alert("데이터를 충분히 입력하세요!!");
 		}
 
+
+
+	}
+
+
+	onDatesChange({ startDate, endDate }) {
+		this.setState({ startDate, endDate });
+	}
+
+	onFocusChange(focusedInput) {
+		this.setState({ focusedInput });
+	}
+
+	isDayBlocked(startDate) {
+		startDate.isAfter(moment().add(6, 'days'));
 	}
 
 	render() {
@@ -108,10 +128,15 @@ class MakeTimeTableContainer extends Component {
 					timeCount={this.state.timeCount}
 					period={this.state.period}
 					onSubmit={this.onSubmit}
+					startDate={this.state.startDate}
+					endDate={this.state.endDate}
+					focusedInput={this.state.focusedInput}
+					dateChange={this.onDatesChange}
+					focusChange={this.onFocusChange}
+					isDayBlocked={this.isDayBlocked}
 				/>
 			</div>
 		);
 	}
 }
-
 export default MakeTimeTableContainer;

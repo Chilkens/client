@@ -107,7 +107,7 @@ body {
 }
 
 .link-container {
-    height: 170px;
+    height: 200px;
     background-color: #639be6;
     padding-top: 15px;
     color: #ffffff;
@@ -135,4 +135,17 @@ a.list-group-item {
 }
 th {
     text-align: center;
+}
+
+.navbar-fixed-bottom {
+    background-color: rgba(142, 154, 242, 0.7);
+}
+
+/*index*/
+.image-bg-fluid-height {
+    padding-top : 50px;
+}
+
+section {
+    padding-bottom: 150px;
 }

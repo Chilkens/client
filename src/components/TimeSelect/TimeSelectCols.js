@@ -11,7 +11,7 @@ export default class TimeSelectCols extends PureComponent{
                         <td
                             key={item}
                             onClick={(e) => {
-                            this.props.addTimeToClick(index, this.props.count)
+                            this.props.addTimeToClick(index, this.props.count, e)
                         }}>{this.props.count}</td>
                     );
                 })}
