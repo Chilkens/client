@@ -11,7 +11,7 @@ import Login from './Login';
 
 import CommonTime from './CommonTime';
 import Share from './Share';
-import ConfirmTimeList from './ConfirmTimeList';
+import EnableTime from './EnableTime';
 
 export {
     Index,
@@ -26,7 +26,6 @@ export {
     LoginButton,
 
     Share,
-    ConfirmTimeList,
-
+    EnableTime,
     CommonTime
 };

@@ -5,9 +5,8 @@ import {IndexContainer, TimeListContainer} from './containers';
 import {MakeTimeTableContainer, SelectTimeContainer} from './containers';
 import {Share} from './components';
 
-import {FailListContainer} from './containers';
-import {Share} from './components';
-import {ConfirmTimeContainer} from './containers';
+import {EnableTimeContainer} from './containers';
+import {CommonTimeContainer} from './containers';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './style.css';
@@ -22,9 +21,9 @@ class routes extends PureComponent{
                     <Route path='list' component={TimeListContainer} />
                     <Route path='form' component={MakeTimeTableContainer} />
                     <Route path='select/:id' component={SelectTimeContainer} />
-                    <Route path='fail' component={FailListContainer} />
+                    <Route path='EnableTime' component={EnableTimeContainer} />
                     <Route path='share' component={Share} />
-                    <Route path='confirm' component={ConfirmTimeContainer} />
+                    <Route path='common' component={CommonTimeContainer} />
 
                 </Route>
             </Router>

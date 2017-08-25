@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
 
-import {FailList} from '../components';
+import {EnableTime} from '../components';
 import {GetTimeTableList} from '../lib/toServer';
 
-class FailListContainer extends Component{
+class EnableTimeContainer extends Component{
     constructor(props){
         super(props);
 
@@ -27,10 +27,18 @@ class FailListContainer extends Component{
 
       const hasIntersectionView = (
         <div>
+            <div className='jumbotron jumbotron-fluid'>
+                <div className='container'>
+                    <h1 className='display-3 no-marginBottom'>가장 많이 모일 수 있는</h1>
+                    <h1 className='display-3 no-marginTop'>시간입니다.</h1>
+                    <p className='lead has-marginTop'>가장 많은 멤버들이 모일 수 있는 시간을<br/>
+                                                      공유해 주세요.</p>
+                </div>
+            </div>
 
             <div className='container'>
                 <div className='row'>
-                    <FailList
+                    <EnableTime
                         timeList={this.state.timeList}
                     />
                 </div>
@@ -64,12 +72,12 @@ class FailListContainer extends Component{
     }
 }
 
-FailListContainer.propTypes = {
+EnableTimeContainer.propTypes = {
   hasIntersection: React.PropTypes.bool
 }
 
-FailListContainer.defaultProps = {
-  hasIntersection: false
+EnableTimeContainer.defaultProps = {
+  hasIntersection: true
 }
 
-export default FailListContainer;
+export default EnableTimeContainer;

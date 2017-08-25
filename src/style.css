@@ -93,17 +93,29 @@ body {
 /*share*/
 .img-rounded {
   border-radius:100%;
-  width:75px;
-  height:75px;
+  width:65px;
+  height:65px;
 }
 
-.vertical-center {
-  vertical-align: center;
-  margin: 0px;
+.paddingTop {
+    padding-top:50%;
+    font-size: 1.7rem;
 }
 
-.have-margin-right {
-  margin-right: 20%;
+.link-container {
+    height: 170px;
+    background-color: #639be6;
+    padding-top: 15px;
+    color: #ffffff;
+}
+
+.link-container p {
+    padding-bottom: 15px;
+    font-size:1.7rem;
+}
+
+.row div {
+    margin-left: 11%;
 }
 
 /*confirm*/

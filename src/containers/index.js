@@ -2,9 +2,9 @@ import IndexContainer from './IndexContainer';
 import TimeListContainer from './TimeListContainer';
 import MakeTimeTableContainer from './MakeTimeTableContainer';
 import SelectTimeContainer from './SelectTimeContainer';
-import FailListContainer from './FailListContainer';
+import EnableTimeContainer from './EnableTimeContainer';
 
-import ConfirmTimeContainer from './ConfirmTimeContainer';
+import CommonTimeContainer from './CommonTimeContainer';
 
 export {
     IndexContainer,
@@ -13,6 +13,6 @@ export {
     MakeTimeTableContainer,
     SelectTimeContainer,
 
-    FailListContainer,
-    ConfirmTimeContainer
+    EnableTimeContainer,
+    CommonTimeContainer
 };

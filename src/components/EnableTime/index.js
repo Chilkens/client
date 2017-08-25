@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import SecondList from './SecondList';
 
-export default class ConfirmTimeList extends PureComponent {
+export default class EnableTime extends PureComponent {
   render() {
 
     const intersectionList = (
