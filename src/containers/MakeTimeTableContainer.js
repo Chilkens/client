@@ -71,14 +71,15 @@ class MakeTimeTableContainer extends Component {
 				title : this.state.title,
 				time : this.state.timeCount,
 				max : this.state.personCount,
-				createdBy : localStorage.kaccount_email,
+				createdBy : "장호동",//localStorage.kaccount_email,
 				start : '2017-08-03',
 				end : '2017-08-07',
 			});
 
 			SaveTimeTable(timeTable)
 			.then(response => {
-				window.location.href = window.location.href.replace('form', 'list');
+				let shareUrl = window.location.href.replace('form', 'share') + `/${response.data.keyUrl}`;
+				window.location.href = shareUrl;
 			})
 			.catch(error => console.log(error));
 		}else{

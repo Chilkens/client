@@ -10,6 +10,7 @@ import TimeSelect from './TimeSelect';
 import Login from './Login';
 import Share from './Share';
 import CommonTime from './CommonTime';
+import EnableTime from './EnableTime';
 
 export {
     Index,
@@ -23,5 +24,6 @@ export {
     Login,
     LoginButton,
     Share,
-    CommonTime
+    CommonTime,
+    EnableTime
 };

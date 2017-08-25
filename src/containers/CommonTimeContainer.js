@@ -4,7 +4,7 @@ import { Title, CommonTime } from '../components';
 
 import { GetTimeTableList } from '../lib/toServer';
 
-export default class ConfirmTimeContainer extends PureComponent {
+export default class CommonTimeContainer extends PureComponent {
 
     constructor(props){
 

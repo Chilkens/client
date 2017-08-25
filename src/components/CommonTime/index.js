@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import ListItem from './ListItem';
 
-export default class ConfirmTimeList extends PureComponent {
+export default class CommonTime extends PureComponent {
 
     render() {
         return(
