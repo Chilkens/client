@@ -19,11 +19,11 @@ export default class Share extends PureComponent {
           <p>공유 후 링크를 통해 재접속해주세요</p>
           <div className="container">
             <div className="row">
-                <div className="col-xs-4">
+                <div className="col-xs-4 have-margin-left">
                     <a href="#"><img src="http://placehold.it/200x150&text=Logo" className="img-rounded" alt="kakao" /></a>
                     <div className="caption center-block">카카오톡</div>
                 </div>
-                <div className="col-xs-4">
+                <div className="col-xs-4 have-margin-left">
                     <a href="#"><img src="http://placehold.it/200x150&text=Logo" className="img-rounded" alt="link-copy" /></a>
                     <div className="caption center-block">링크복사</div>
                 </div>
