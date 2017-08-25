@@ -1,24 +1,39 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
 
-import {EnableTime} from '../components';
-import {GetTimeTableList} from '../lib/toServer';
+import { EnableTime } from '../components';
+import { getIntersectionByUrl } from '../lib/toServer';
 
 class EnableTimeContainer extends Component{
     constructor(props){
         super(props);
 
         this.state = {
-            timeList : [],
+            intersection : {
+                date : '',
+                time : []
+            },
+            hasIntersection : false,
         };
     }
 
     componentDidMount(){
-        GetTimeTableList('장호동')
-        .then(response => {
-            this.setState({
-                timeList : response.data,
-            });
+        let url = this.props.location.pathname.split("/")[2];
+
+        getIntersectionByUrl(url)
+        .then((response) => {
+
+            if(response.data.intersection){
+                this.setState({
+                    intersection : response.data.intersection,
+                    hasIntersection : true,
+                });
+            }else{
+                this.setState({
+                    hasIntersection : false,
+                })
+            }
+
         })
         .catch(error => console.log(error));
     }
@@ -39,7 +54,7 @@ class EnableTimeContainer extends Component{
             <div className='container'>
                 <div className='row'>
                     <EnableTime
-                        timeList={this.state.timeList}
+                        intersection={this.state.intersection}
                     />
                 </div>
             </div>
@@ -90,21 +105,18 @@ class EnableTimeContainer extends Component{
         </div>
       );
 
+      if(this.state.hasIntersection){
+          return(
+              hasIntersectionView
+          )
+      }else{
+          return(
+              noIntersectionView
+          )
+      }
 
-        return(
-          <div>
-            {this.props.hasIntersection ? hasIntersectionView : noIntersectionView}
-          </div>
-        );
     }
 }
 
-EnableTimeContainer.propTypes = {
-  hasIntersection: React.PropTypes.bool
-}
-
-EnableTimeContainer.defaultProps = {
-  hasIntersection: true
-}
 
 export default EnableTimeContainer;
