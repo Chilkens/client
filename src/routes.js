@@ -7,8 +7,6 @@ import {CommonTimeContainer, EnableTimeContainer} from './containers';
 //import {FailListContainer} from './containers';
 import {Share} from './components';
 
-import {EnableTimeContainer} from './containers';
-import {CommonTimeContainer} from './containers';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './style.css';
