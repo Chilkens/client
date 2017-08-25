@@ -8,6 +8,8 @@ import FormElement  from './Form/FormElement';
 import TimeSelect from './TimeSelect';
 
 import Login from './Login';
+import Share from './Share';
+import CommonTime from './CommonTime';
 
 export {
     Index,
@@ -20,4 +22,6 @@ export {
     TimeSelect,
     Login,
     LoginButton,
+    Share,
+    CommonTime
 };
