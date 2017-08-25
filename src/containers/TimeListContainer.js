@@ -24,7 +24,7 @@ class TimeListContainer extends Component{
     }
 
     componentDidMount(){
-        document.body.style.backgroundImage= "-webkit-gradient(linear, right top, left bottom, from(rgb(62, 184, 228)), to(rgb(86, 130, 235)))";
+        document.body.style.backgroundImage= "-webkit-gradient(linear, right top, left bottom, from(rgb(79, 145, 233)), to(rgb(102, 93, 240)))";
         console.log(document.body.style);
         GetTimeTableList(localStorage.kaccount_email)
         .then(response => {

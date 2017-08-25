@@ -12,7 +12,7 @@ export default class Index extends PureComponent{
                 <section>
                     <div className="container">
                         <div className="image-bg-fluid-height">
-                            <img className="img-responsive img-center" src="http://placehold.it/200x150&text=Logo" alt=""/>
+                            <img className="img-responsive img-center" src="./images/logo_3x.png" alt=""/>
                         </div>
                         <div className="row">
                             <div className="col-lg-12">
