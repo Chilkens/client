@@ -21,8 +21,8 @@ class routes extends PureComponent{
                     <Route path='form' component={MakeTimeTableContainer} />
                     <Route path='select/:id' component={SelectTimeContainer} />
                     <Route path='share/:id' component={Share} />
-                    <Route path='common' component={CommonTimeContainer} />
-                    <Route path='enable' component={EnableTimeContainer} />
+                    <Route path='common/:id' component={CommonTimeContainer} />
+                    <Route path='enable/:id' component={EnableTimeContainer} />
                 </Route>
             </Router>
         );

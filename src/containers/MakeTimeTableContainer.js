@@ -71,7 +71,7 @@ class MakeTimeTableContainer extends Component {
 				title : this.state.title,
 				time : this.state.timeCount,
 				max : this.state.personCount,
-				createdBy : "장호동",//localStorage.kaccount_email,
+				createdBy : localStorage.kaccount_email,
 				start : '2017-08-03',
 				end : '2017-08-07',
 			});

@@ -23,6 +23,8 @@ export default class CommonTimeContainer extends PureComponent {
             });
         })
         .catch(error => console.log(error));
+        let url = this.props.location.pathname.split("/")[2];
+        console.log(url);
   }
 
 

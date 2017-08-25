@@ -32,7 +32,13 @@ class SelectTimeContainer extends Component {
 
         await getTimeTableByUrl(url)
         .then(response => {
-            this.setState({timeTable : response.data});
+			if(response.data.max <= response.data.current){
+				let enableUrl = window.location.href.replace('select', 'enable');
+				window.location.href = enableUrl;
+			}else{
+				this.setState({timeTable : response.data});
+			}
+
         })
         .catch(error => console.log(error));
 
@@ -105,7 +111,10 @@ class SelectTimeContainer extends Component {
         let url = this.props.location.pathname.split("/")[2];
 
         SaveTimePickResult(url, resultSubmit)
-        .then(response => console.log(response))
+        .then(response => {
+			let enableUrl = window.location.href.replace('select', 'common');
+			window.location.href = enableUrl;
+		})
         .catch(error => console.log(error));
 
     }
