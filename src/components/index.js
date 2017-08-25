@@ -10,6 +10,8 @@ import TimeSelect from './TimeSelect';
 import Login from './Login';
 
 import FailList from './FailList';
+import Share from './Share';
+import ConfirmTimeList from './ConfirmTimeList';
 
 export {
     Index,
@@ -23,5 +25,7 @@ export {
     Login,
     LoginButton,
 
-    FailList
+    FailList,
+    Share,
+    ConfirmTimeList
 };

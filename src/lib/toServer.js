@@ -29,3 +29,9 @@ export function getKaKaoProfile(access_token){
     };
     return axios(authOptions);
 }
+
+export function SaveTimePickResult(keyUrl, data){
+
+    //console.log(`${kUrl}/api/v1/timepick/save?keyUrl=${keyUrl}`);
+    return axios.post(`${kUrl}/api/v1/timepick/save?keyUrl=${keyUrl}`, data);
+}

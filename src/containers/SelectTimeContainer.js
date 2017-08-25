@@ -3,10 +3,8 @@ import Moment from 'moment';
 
 import { Title, TimeSelect } from '../components';
 import { getTimeTableByUrl } from '../lib/toServer';
+import { SaveTimePickResult } from '../lib/toServer';
 
-const time = [{'time':9}, {'time':10},	{'time':11}, {'time': 12}, {'time':13}, {'time':14},
- 							{'time': 15}, {'time': 16}, {'time': 17}, {'time': 18}, {'time':19},
-							{'time':20}, {'time':21}, {'time':22}, {'time':23}];
 
 const colorStyle = {
   backgroundColor: '#6cee80'
@@ -29,6 +27,7 @@ class SelectTimeContainer extends Component {
             selecTimeResult : [],
         };
         this.addTimeToClick = this.addTimeToClick.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
 	}
 
     async componentDidMount(){
@@ -55,6 +54,7 @@ class SelectTimeContainer extends Component {
         let endDate = Moment(this.state.timeTable.end);
 
         this.setState({timeDiff : endDate.diff(startDate, 'days')});
+
     }
 
     makeTimeSelectList(){
@@ -93,9 +93,28 @@ class SelectTimeContainer extends Component {
 
     }
 
-    onSubmit(){
+    onSubmit(e){
 
-        console.log(this.state.selecTimeResult[0]);
+        e.preventDefault();
+        let result = {};
+        this.state.selecTimeResult.forEach((item, index) => {
+            result = Object.assign(result, item);
+        });
+
+
+        let resultSubmit = Object.assign({}, {
+            pick : {
+                createdBy : "테스트봇(호동꺼)",
+            },
+            pickDetailList : result,
+        });
+
+        let url = this.props.location.pathname.split("/")[2];
+
+        SaveTimePickResult(url, resultSubmit)
+        .then(response => console.log(response))
+        .catch(error => console.log(error));
+
     }
 
 
@@ -111,6 +130,7 @@ class SelectTimeContainer extends Component {
 					          times = {this.state.selecTimeResult}
                     count = {this.state.timeDiff}
                     addTimeToClick = {this.addTimeToClick}
+                    onSubmit = {this.onSubmit}
                     />
 
 			</div>

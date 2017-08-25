@@ -89,3 +89,19 @@ body {
 	border-color: #FFFFFF;
 	border-radius: 0;
 }
+
+/*share*/
+.img-rounded {
+  border-radius:100%;
+  width:75px;
+  height:75px;
+}
+
+.vertical-center {
+  vertical-align: center;
+  margin: 0px;
+}
+
+.have-margin-right {
+  margin-right: 20%;
+}

@@ -4,6 +4,8 @@ import MakeTimeTableContainer from './MakeTimeTableContainer';
 import SelectTimeContainer from './SelectTimeContainer';
 import FailListContainer from './FailListContainer';
 
+import ConfirmTimeContainer from './ConfirmTimeContainer';
+
 export {
     IndexContainer,
     TimeListContainer,
@@ -11,5 +13,6 @@ export {
     MakeTimeTableContainer,
     SelectTimeContainer,
 
-    FailListContainer
+    FailListContainer,
+    ConfirmTimeContainer
 };
