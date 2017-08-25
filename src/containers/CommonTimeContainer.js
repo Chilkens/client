@@ -14,7 +14,7 @@ export default class CommonTimeContainer extends PureComponent {
         };
     }
 
-    componentDidount(){
+    componentDidMount(){
 
         let url = this.props.location.pathname.split("/")[2];
         getTimeTableByUrl(url)
@@ -23,7 +23,7 @@ export default class CommonTimeContainer extends PureComponent {
 				let enableUrl = window.location.href.replace('common', 'enable');
 				window.location.href = enableUrl;
 			}else{
-				this.setState({timeTable : response.data});
+				this.setState({timeList : response.data});
 			}
         })
         .catch((error) => console.log(error));

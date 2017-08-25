@@ -4,7 +4,7 @@ import ListItem from './ListItem';
 export default class CommonTime extends PureComponent {
 
     render() {
-
+        console.log(this.props.timeList);
         let period = `${this.props.timeList.start} ~ ${this.props.timeList.end}`;
         let title = String(this.props.timeList.title).slice(0, 22);
 
