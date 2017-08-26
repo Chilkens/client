@@ -19,6 +19,9 @@ class FormElement extends PureComponent{
 				this.props.focusedInput === END_DATE && (day.isBefore(this.props.startDate) || day.isAfter(this.props.startDate.clone().add(maximumNights, 'days')))
 			);
 		}
+		let widthStyle ={
+			height : '300px'
+		};
 
 		return(
 			<div>
@@ -62,13 +65,7 @@ class FormElement extends PureComponent{
 						</div>
 					<br />
 				</div>
-				<div>
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
+				<div style={widthStyle}>
 				</div>
 				<footer>
 					 <div className="navbar-fixed-bottom">

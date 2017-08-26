@@ -103,7 +103,7 @@ class EnableTimeContainer extends Component{
           </div>
           <footer>
              <div className="navbar-fixed-bottom">
-                  <Link to ='/#'><h1 className="section-heading text-center">공유하기</h1></Link>
+                  <Link to ='/'><h1 className="section-heading text-center">공유하기</h1></Link>
              </div>
            </footer>
         </div>
