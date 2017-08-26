@@ -15,10 +15,10 @@ export default class EnableTime extends PureComponent {
                 <a href="#" className="list-group-item list-group-item-action flex-column align-items-start">
                     <div className="d-flex w-100 justify-content-between">
                         <small className='pull-right'>완료</small>
-                        <h4 className="mb-1">제애모옥 잠시 보류</h4>
+                        <h4 className="mb-1">{this.props.title.slice(0, 22)}</h4>
                     </div>
                     <p className="mb-1">{enableTime}</p>
-                    <small>샘플1 샘플2 샘플3</small>
+                    <small></small>
                 </a>
             </div>
         );

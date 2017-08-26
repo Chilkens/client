@@ -9,6 +9,7 @@ class EnableTimeContainer extends Component{
         super(props);
 
         this.state = {
+            title : "",
             intersection : {
                 date : '',
                 time : []
@@ -24,7 +25,9 @@ class EnableTimeContainer extends Component{
         .then((response) => {
 
             if(response.data.intersection){
+                console.log(response.data);
                 this.setState({
+                    title : response.data.title,
                     intersection : response.data.intersection,
                     hasIntersection : true,
                 });
@@ -55,6 +58,7 @@ class EnableTimeContainer extends Component{
                 <div className='row'>
                     <EnableTime
                         intersection={this.state.intersection}
+                        title={this.state.title}
                     />
                 </div>
             </div>
