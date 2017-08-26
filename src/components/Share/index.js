@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 
-
 export default class Share extends PureComponent {
 
   componentDidMount() {
@@ -22,11 +21,11 @@ export default class Share extends PureComponent {
             <div className="container">
               <div className="row">
                   <div className="col-xs-4 have-margin-left">
-                      <a id='kakao-link-btn'><img src="./images/kakaotalk_3x.png" className="img-rounded" alt="kakao" /></a>
+                      <a id='kakao-link-btn'><img src='./images/kakaotalk_3x.png' className="img-rounded" alt="kakao" /></a>
                       <div className="caption center-block">카카오톡</div>
                   </div>
                   <div className="col-xs-4 have-margin-left">
-                      <a href="#"><img src="./images/copy-link_3x.png" className="img-rounded" alt="link-copy" /></a>
+                      <a href="#"><img src='./images/copy-link_3x.png' className="img-rounded" alt="link-copy" /></a>
                       <div className="caption center-block">링크복사</div>
                   </div>
               </div>

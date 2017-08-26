@@ -79,8 +79,7 @@ class SelectTimeContainer extends Component {
 
     }
 
-    addTimeToClick(e, id, time){
-
+    addTimeToClick(id, time, e){
         let stateCopy = Object.assign({}, this.state);
         let currentTime = String(Object.keys(stateCopy.selecTimeResult[id]));
 
@@ -88,13 +87,12 @@ class SelectTimeContainer extends Component {
         if(currentIndex >= 0){
             stateCopy.selecTimeResult[id][currentTime].splice(currentIndex, 1);
             this.setState(stateCopy);
-            console.log(stateCopy.selecTimeResult[id]);
         }else{
             stateCopy.selecTimeResult[id][currentTime].push(time);
             this.setState(stateCopy);
-            console.log(stateCopy.selecTimeResult[id]);
         }
-        {e.target.style.backgroundColor == 'rgb(108, 238, 128)' ? e.target.style.backgroundColor=''
+
+		{e.target.style.backgroundColor == 'rgb(108, 238, 128)' ? e.target.style.backgroundColor=''
                                                                 : e.target.style.backgroundColor='rgb(108, 238, 128)'};
 
     }

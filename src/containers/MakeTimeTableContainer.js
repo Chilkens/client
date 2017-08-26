@@ -13,9 +13,8 @@ class MakeTimeTableContainer extends Component {
 			title : '',
 			personCount : 3,
 			timeCount : 3,
-			period : '7월 20일(수) ~ 7월 26일(화)',
-			startDate: null,
-			endDate: null
+			startDate : null,
+			endDate : null,
 		};
 
 		this.AddPersonCount = this.AddPersonCount.bind(this);
@@ -29,8 +28,11 @@ class MakeTimeTableContainer extends Component {
 		this.isDayBlocked = this.isDayBlocked.bind(this);
 	}
 
-	onChange(e){
+	componentDidMount(){
 
+	}
+
+	onChange(e){
 		e.preventDefault();
 		this.setState({
 			title : e.target.value,
@@ -69,14 +71,14 @@ class MakeTimeTableContainer extends Component {
 	onSubmit(e){
 
 		e.preventDefault();
-		if(this.state.title){
+		if(this.state.title && this.state.startDate && this.state.endDate){
 			const timeTable = Object.assign({}, {
 				title : this.state.title,
 				time : this.state.timeCount,
 				max : this.state.personCount,
-				createdBy : '장호동',
-				start : '2017-08-03',
-				end : '2017-08-07',
+				createdBy : localStorage.kaccount_email,
+				start : this.state.startDate.format().split('T')[0],
+				end : this.state.endDate.format().split('T')[0],
 			});
 
 			SaveTimeTable(timeTable)
@@ -86,10 +88,13 @@ class MakeTimeTableContainer extends Component {
 			})
 			.catch(error => console.log(error));
 		}else{
-			console.log("제목을 입력하세요");
+			alert("데이터를 충분히 입력하세요!!");
 		}
 
+
+
 	}
+
 
 	onDatesChange({ startDate, endDate }) {
 		this.setState({ startDate, endDate });
@@ -134,5 +139,4 @@ class MakeTimeTableContainer extends Component {
 		);
 	}
 }
-
 export default MakeTimeTableContainer;
