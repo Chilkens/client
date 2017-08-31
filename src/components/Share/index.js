@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react';
-
-
+import React, {PureComponent} from 'react';
+import kakao from './images/kakaotalk_3x.png';
+import link from './images/copy-link_3x.png';
 export default class Share extends PureComponent {
 
   componentDidMount() {
@@ -23,11 +23,11 @@ export default class Share extends PureComponent {
                   <div className="container">
                       <div className="row">
                           <div className="col-xs-4 have-margin-left">
-                              <a id='kakao-link-btn'><img src="http://placehold.it/200x150&text=Logo" className="img-rounded" alt="kakao" /></a>
+                              <a id='kakao-link-btn'><img className="img-rounded" src={kakao}  alt="kakao" /></a>
                               <div className="caption center-block">카카오톡</div>
                           </div>
                           <div className="col-xs-4 have-margin-left">
-                              <a href="#"><img src="http://placehold.it/200x150&text=Logo" className="img-rounded" alt="link-copy" /></a>
+                              <a href="#"><img src={link} className="img-rounded" alt="copy-link" /></a>
                               <div className="caption center-block">링크복사</div>
                           </div>
                       </div>
