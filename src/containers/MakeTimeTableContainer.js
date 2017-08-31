@@ -29,7 +29,7 @@ class MakeTimeTableContainer extends Component {
 	}
 
 	componentDidMount(){
-
+		document.body.style.backgroundImage= "-webkit-gradient(linear, left top, right bottom, from(rgb(78, 146, 233)), to(rgb(75, 154, 232)))";
 	}
 
 	onChange(e){
@@ -111,10 +111,13 @@ class MakeTimeTableContainer extends Component {
 	render() {
 		return(
 			<div>
-				<Title
-					title='타임테이블 만들기'
-					content='Time Picker로 약속시간을 편하게 정해보세요'
-				/>
+
+				<div className='jumbotron jumbotron-fluid form-jumbotron'>
+					<div className='container'>
+						<h1 className='display-3'>타임피커 만들기</h1>
+						<p className='lead'></p>
+					</div>
+				</div>
 				<FormTitle
 					title='타임테이블 이름'
 					onChange={this.onChange}

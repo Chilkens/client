@@ -24,8 +24,7 @@ class TimeListContainer extends Component{
     }
 
     componentDidMount(){
-        document.body.style.backgroundImage= "-webkit-gradient(linear, right top, left bottom, from(rgb(62, 184, 228)), to(rgb(86, 130, 235)))";
-        console.log(document.body.style);
+        document.body.style.backgroundImage= "-webkit-gradient(linear, left top, right bottom, from(rgb(92, 116, 236)), to(rgb(133, 139, 233)))";
         GetTimeTableList(localStorage.kaccount_email)
         .then(response => {
             this.setState({
@@ -52,7 +51,7 @@ class TimeListContainer extends Component{
                 </div>
                 <footer>
                    <div className="navbar-fixed-bottom">
-                        <Link to ='/form'><h1 className="section-heading text-center">새로운 타임피커 만들기</h1></Link>
+                        <Link to ='/form'><h1 className="text-center">새로운 타임피커 만들기</h1></Link>
                    </div>
                  </footer>
             </div>

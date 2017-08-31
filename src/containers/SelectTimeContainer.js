@@ -87,8 +87,8 @@ class SelectTimeContainer extends Component {
             stateCopy.selecTimeResult[id][currentTime].push(time);
             this.setState(stateCopy);
         }
-		{e.target.style.backgroundColor == 'rgb(108, 238, 128)' ? e.target.style.backgroundColor=''
-                                                                : e.target.style.backgroundColor='rgb(108, 238, 128)'};
+		{e.target.style.backgroundColor == 'rgba(108, 238, 128, 0.3)' ? e.target.style.backgroundColor=''
+                                                                : e.target.style.backgroundColor='rgba(108, 238, 128,0.3)'};
 
     }
 

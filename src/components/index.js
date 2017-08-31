@@ -1,4 +1,4 @@
-import Index from './Index';
+import Index from './Index/';
 import Title from './Title';
 import TimeTableItem from './TimeTableItem';
 import LoginButton from './Login/LoginButton';

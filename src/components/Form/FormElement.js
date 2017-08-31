@@ -28,8 +28,8 @@ class FormElement extends PureComponent{
 				<div className="row-fluid">
 					<div className='col-lg-12'>
 						<h5 className="white-letter">모임 인원</h5>
-						<button onClick={this.props.AddPersonCount} className='btn btn-info pull-right form-btn plus'>+</button>
-						<button onClick={this.props.MinusPersonCount} className='btn btn-info pull-right form-btn minus'>-</button>
+						<button onClick={this.props.AddPersonCount} className='btn btn-info pull-right form-btn plus'><b>+</b></button>
+						<button onClick={this.props.MinusPersonCount} className='btn btn-info pull-right form-btn minus'><b>-</b></button>
 						<h2 className="white-letter">{this.props.personCount} 명</h2>
 					</div>
 				</div>
@@ -37,8 +37,8 @@ class FormElement extends PureComponent{
 					<br />
 					<div className='col-lg-12'>
 						<h5 className="white-letter">모임 시간</h5>
-						<button onClick={this.props.AddTimeCount} className='btn btn-info pull-right form-btn plus'>+</button>
-						<button onClick={this.props.MinusTimeCount} className='btn btn-info pull-right form-btn minus'>-</button>
+						<button onClick={this.props.AddTimeCount} className='btn btn-info pull-right form-btn plus'><b>+</b></button>
+						<button onClick={this.props.MinusTimeCount} className='btn btn-info pull-right form-btn minus'><b>-</b></button>
 						<h2 className="white-letter">{this.props.timeCount} 시간</h2>
 					</div>
 				</div>
@@ -69,7 +69,7 @@ class FormElement extends PureComponent{
 				</div>
 				<footer>
 					 <div className="navbar-fixed-bottom">
-					     <a onClick={this.props.onSubmit}><h1 className="section-heading text-center btn-bottom">공유하기</h1></a>
+					     <a onClick={this.props.onSubmit}><h1 className="text-center">공유하기</h1></a>
 					 </div>
 				 </footer>
 
