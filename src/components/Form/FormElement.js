@@ -47,7 +47,7 @@ class FormElement extends PureComponent{
 				<div className="container">
 
 						<h5 className="white-letter">타임테이블 기간</h5>
-						<div className="col-sm-3">
+						<div className="col-sm-3 date-container">
 							<DateRangePicker
 								startDate={this.props.startDate}
 								endDate={this.props.endDate}
@@ -57,8 +57,8 @@ class FormElement extends PureComponent{
 								isDayBlocked={this.props.isDayBlocked}
 								startDateId="start"
 								endDateId="end"
-								startDatePlaceholderText="시작"
-								endDatePlaceholderText="끝"
+								startDatePlaceholderText="시작일"
+								endDatePlaceholderText="말일"
 								isOutsideRange = {isOutsideRange}
 								numberOfMonths = {1}
 							/>

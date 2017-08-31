@@ -136,6 +136,26 @@ input[type="text"]
 	border-radius: 0;
 }
 
+.DateInput {
+    background: transparent;
+    color: white;
+}
+
+.DateRangePickerInput {
+    background-color:transparent;
+    border:none;
+}
+
+.DateRangePickerInput__arrow svg {
+    fill: white;
+}
+
+.date-container {
+    padding: 0px;
+}
+
+
+
 /*share*/
 .img-rounded {
   border-radius:100%;
@@ -180,7 +200,7 @@ th {
 }
 
 .navbar-fixed-bottom {
-    background-color: rgba(142, 154, 242, 0.6);
+    background-color: rgba(157, 169, 250, 0.6);
 }
 
 .navbar-fixed-bottom h1 {
