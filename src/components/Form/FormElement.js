@@ -16,6 +16,9 @@ class FormElement extends PureComponent{
 				this.props.focusedInput === END_DATE && (day.isBefore(this.props.startDate) || day.isAfter(this.props.startDate.clone().add(maximumNights, 'days')))
 			);
 		}
+		let widthStyle ={
+			height : '300px'
+		};
 
 		return(
 			<div>
@@ -34,12 +37,6 @@ class FormElement extends PureComponent{
 						<button onClick={this.props.AddTimeCount} className='btn btn-info pull-right form-btn plus'>+</button>
 						<button onClick={this.props.MinusTimeCount} className='btn btn-info pull-right form-btn minus'>-</button>
 						<h2 className="form_content white-letter">{this.props.timeCount} 시간</h2>
-					</div>
-				</div>
-
-					<br />
-				<div className="container">
-
 						<h5 className="white-letter form_header">타임테이블 기간</h5>
 						<div className="col-sm-3">
 							<DateRangePicker
@@ -57,9 +54,11 @@ class FormElement extends PureComponent{
 								numberOfMonths = {1}
 							/>
 						</div>
-					<br />
-
+						<div style={widthStyle}>
+						</div>
+					</div>
 				</div>
+
 
 				<footer>
 					 <div className="navbar-fixed-bottom">
