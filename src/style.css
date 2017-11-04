@@ -15,6 +15,16 @@ body {
     background-image:         linear-gradient(30deg, var(--purpleish-blue), #2fdae0); /* 표준구문, 표준구문은 반드시 마지막에 삽입해야한다. */
 }
 
+.body_color_skyblue_gradient{
+
+    background-color : #2fdae0;
+    background-image: -webkit-linear-gradient(30deg, #6b53f1, #2fdae0);
+    background-image:    -moz-linear-gradient(30deg, #6b53f1, #2fdae0); /* Fx 3.6 부터 Fx 15 까지 처리 */
+    background-image:     -ms-linear-gradient(30deg, #6b53f1, #2fdae0); /* IE 10 Platform Previews, Consumer Preview */
+    background-image:      -o-linear-gradient(30deg, #6b53f1, #2fdae0); /* Opera 11.1 부터 12.0 까지 처리 */
+    background-image:         linear-gradient(30deg, #6b53f1, #2fdae0); /* 표준구문, 표준구문은 반드시 마지막에 삽입해야한다. */
+}
+
 .button_content{
     font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
     font-size: 9px;

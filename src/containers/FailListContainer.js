@@ -13,6 +13,10 @@ class FailListContainer extends Component{
         };
     }
 
+    componentWillMount(){
+        this.changeBodyColor();
+    }
+
     componentDidMount(){
         GetTimeTableList('장호동')
         .then(response => {
@@ -21,6 +25,10 @@ class FailListContainer extends Component{
             });
         })
         .catch(error => console.log(error));
+    }
+
+    changeBodyColor(){
+        document.getElementsByTagName('body')[0].className = 'body_color_skyblue_gradient';
     }
 
     render(){

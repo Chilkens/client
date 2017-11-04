@@ -17,6 +17,10 @@ class EnableTimeContainer extends Component{
             hasIntersection : false,
         };
     }
+    
+    componentWillMount(){
+        this.changeBodyColor();
+    }
 
     componentDidMount(){
         let url = this.props.location.pathname.split("/")[2];
@@ -39,6 +43,10 @@ class EnableTimeContainer extends Component{
 
         })
         .catch(error => console.log(error));
+    }
+
+    changeBodyColor(){
+        document.getElementsByTagName('body')[0].className = 'body_color_skyblue_gradient';
     }
 
     render(){
