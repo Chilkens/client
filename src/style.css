@@ -27,12 +27,16 @@ body {
 
 .button_content{
     font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
-    font-size: 9px;
+    font-size: 25px;
     font-weight: bold;
     line-height: 1;
     letter-spacing: -0.1px;
     text-align: center;
     color: #ffffff;
+}
+
+.button_wrapper{
+    height : 30px;
 }
 
 

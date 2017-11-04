@@ -6,7 +6,16 @@
 }
 
 .btn-gray {
-	background-color: #acb8b4;
+	background-color: #eae8ea;
 	border-color: #FFFFFF;
 	border-radius: 0;
+}
+
+.select_text{
+	opacity: 0.3;
+	font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+    font-size: 12px;
+    letter-spacing: -0.2px;
+	text-align: center;
+    color: #ffffff;
 }

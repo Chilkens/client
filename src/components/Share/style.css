@@ -1,0 +1,20 @@
+.shared_background{
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.shared_parent_background{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+.shared_text{
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.1px;
+    text-align: center;
+    color: #ffffff;
+}

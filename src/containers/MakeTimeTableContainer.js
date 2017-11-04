@@ -27,10 +27,17 @@ class MakeTimeTableContainer extends Component {
 		this.onFocusChange = this.onFocusChange.bind(this);
 		this.isDayBlocked = this.isDayBlocked.bind(this);
 	}
+	componentWillMount(){
+        this.changeBodyColor();
+    }
 
 	componentDidMount(){
 
 	}
+
+	changeBodyColor(){
+        document.getElementsByTagName('body')[0].className = 'body_color_skyblue_gradient';
+    }
 
 	onChange(e){
 		e.preventDefault();
@@ -112,8 +119,8 @@ class MakeTimeTableContainer extends Component {
 		return(
 			<div>
 				<Title
-					title='타임테이블 만들기'
-					content='Time Picker로 약속시간을 편하게 정해보세요'
+					title='타임피커 만들기'
+					content=''
 				/>
 				<FormTitle
 					title='타임테이블 이름'

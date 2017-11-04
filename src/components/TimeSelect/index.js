@@ -36,7 +36,9 @@ class TimeSelect extends PureComponent{
 								addTimeToClick={this.props.addTimeToClick}
 							/>
 					</table>
-					<button className="btn btn-default btn-block btn-gray" onClick={this.props.onSubmit}>완료</button>
+					<button className="btn btn-default btn-block btn-gray" onClick={this.props.onSubmit}>
+						<span className='section-heading button_content'>선택 완료</span>
+					</button>
 
 				</div>
 			</div>

@@ -26,6 +26,10 @@ class SelectTimeContainer extends Component {
         this.onSubmit = this.onSubmit.bind(this);
 	}
 
+	componentWillMount(){
+        this.changeBodyColor();
+    }
+
     async componentDidMount(){
 
         let url = this.props.location.pathname.split("/")[2];
@@ -47,6 +51,10 @@ class SelectTimeContainer extends Component {
             selecTimeResult : this.makeTimeSelectList(),
         });
 
+    }
+
+	changeBodyColor(){
+        document.getElementsByTagName('body')[0].className = 'body_color_skyblue_gradient';
     }
 
     calculateTimeDiff(){
@@ -76,7 +84,13 @@ class SelectTimeContainer extends Component {
 
     addTimeToClick(id, time, e){
 
-        let stateCopy = Object.assign({}, this.state);
+		this.addTimeToAttendence(id, time);
+		this.toggleClickToString(e);
+
+    }
+
+	addTimeToAttendence(id, time){
+		let stateCopy = Object.assign({}, this.state);
         let currentTime = String(Object.keys(stateCopy.selecTimeResult[id]));
 
         let currentIndex = stateCopy.selecTimeResult[id][currentTime].indexOf(time);
@@ -87,10 +101,17 @@ class SelectTimeContainer extends Component {
             stateCopy.selecTimeResult[id][currentTime].push(time);
             this.setState(stateCopy);
         }
-		{e.target.style.backgroundColor == 'rgb(108, 238, 128)' ? e.target.style.backgroundColor=''
-                                                                : e.target.style.backgroundColor='rgb(108, 238, 128)'};
+	}
 
-    }
+	toggleClickToString(e){
+		if(e.target.style.opacity === '0.3' || e.target.style.opacity === ''){
+			e.target.style.opacity = '1.0';
+			e.target.style.fontWeight = 'bold';
+		}else{
+			e.target.style.opacity = '0.3';
+			e.target.style.fontWeight = 'bold';
+		}
+	}
 
     onSubmit(e){
 

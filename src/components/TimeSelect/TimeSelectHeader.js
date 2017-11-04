@@ -5,7 +5,7 @@ export default class TimeSelectHeader extends PureComponent{
     render(){
 
         return(
-            <th>{this.props.title}</th>
+            <th className='select_text'>{this.props.title}</th>
         );
     }
 }

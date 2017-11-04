@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 
+import './style.css';
 
 export default class Share extends PureComponent {
 
@@ -12,9 +13,9 @@ export default class Share extends PureComponent {
   render() {
 
       return (
-          <div>
-              <div className="jumbotron text-center paddingTop">
-                  모임시간이 확정되면<br/>마지막 사용자가 팀원들에게 공유합니다.
+          <div className='shared_parent_background'>
+              <div className="jumbotron paddingTop text-center shared_background">
+                  <span className='shared_text'>모임시간이 확정되면<br/>마지막 사용자가 팀원들에게 공유합니다.</span>
               </div>
               <br/><br/><br/>
               <div className="link-container text-center">

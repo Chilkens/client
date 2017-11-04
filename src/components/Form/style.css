@@ -32,3 +32,21 @@
 	border-color: #FFFFFF;
 	border-radius: 0;
 }
+
+.form_header{
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: -0.1px;
+    color: #ffffff;
+}
+
+.form_content{
+	font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+    font-size: 16px;
+	font-weight: 300;
+	line-height: 1;
+	letter-spacing: -0.2px;
+	color: #ffffff;
+}
