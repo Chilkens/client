@@ -1,0 +1,47 @@
+body{
+
+  /*
+  background-image: -webkit-linear-gradient(top, hsl(0, 80%, 70%), #bada55);
+  background-image:    -moz-linear-gradient(top, hsl(0, 80%, 70%), #bada55);
+  background-image:     -ms-linear-gradient(top, hsl(0, 80%, 70%), #bada55);
+  background-image:      -o-linear-gradient(top, hsl(0, 80%, 70%), #bada55);
+  background-image:         linear-gradient(to bottom, hsl(0, 80%, 70%), #bada55);
+  */
+}
+
+.item_header{
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+    font-size: 8px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: -0.1px;
+    color: #ffffff;
+}
+
+.item_content{
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: -0.2px;
+    color: #ffffff;
+}
+
+.item_condition{
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+    font-size: 8px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: -0.1px;
+    text-align: right;
+    color: #ffffff;
+}
+
+
+.item_member{
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+    font-size: 8px;
+    font-weight: 100;
+    line-height: 1;
+    letter-spacing: -0.2px;
+    color:#ffffff;
+}

@@ -1,3 +1,4 @@
+
 .image-bg-fluid-height,
 .image-bg-fixed-height {
     text-align: center;
@@ -38,4 +39,20 @@ footer {
     .section-heading {
         font-size: 2em;
     }
+}
+
+
+.index_title{
+    width: 63.2px;
+    height: 8px;
+    object-fit: contain;
+}
+
+.index_content{
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: -0.1px;
+    text-align: center;
+    color: #6c6c6c;
 }

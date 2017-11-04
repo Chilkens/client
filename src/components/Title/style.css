@@ -1,0 +1,17 @@
+
+.title{
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+    font-size : 15px;
+    font-weight : bold;
+    line-height: 1;
+    letter-spacing: -0.2px;
+    color : #ffffff;
+}
+
+.title_content{
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+    font-size: 8px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #ffffff;
+}

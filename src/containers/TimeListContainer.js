@@ -12,6 +12,7 @@ class TimeListContainer extends Component{
         this.state = {
             timeList : [],
         };
+
     }
 
     componentWillMount(){
@@ -21,11 +22,12 @@ class TimeListContainer extends Component{
                 console.log("로그인 되았음");
             }
         }
+        this.changeBodyColor();
     }
 
     componentDidMount(){
-        document.body.style.backgroundImage= "-webkit-gradient(linear, right top, left bottom, from(rgb(62, 184, 228)), to(rgb(86, 130, 235)))";
-        console.log(document.body.style);
+
+
         GetTimeTableList(localStorage.kaccount_email)
         .then(response => {
             this.setState({
@@ -33,6 +35,10 @@ class TimeListContainer extends Component{
             });
         })
         .catch(error => console.log(error));
+    }
+
+    changeBodyColor(){
+        document.getElementsByTagName('body')[0].className = 'body_color_purple_gradient';
     }
 
     render(){
