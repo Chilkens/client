@@ -64,9 +64,10 @@ class FormElement extends PureComponent{
 							/>
 						</div>
 					<br />
+					<div style={widthStyle}>
+					</div>
 				</div>
-				<div style={widthStyle}>
-				</div>
+
 				<footer>
 					 <div className="navbar-fixed-bottom">
 					     <a onClick={this.props.onSubmit}><h1 className="section-heading text-center btn-bottom button_content">공유 하기</h1></a>
