@@ -6,10 +6,15 @@
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    margin-top:40px;
 }
 
 .img-center {
 	margin: 0 auto;
+}
+
+.marign_bottom_little{
+    margin-bottom: 10px;
 }
 
 section {

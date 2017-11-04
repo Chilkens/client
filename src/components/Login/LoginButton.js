@@ -8,7 +8,7 @@ export default class LoginButton extends PureComponent{
         return(
             <footer>
                 <div className="navbar-fixed-bottom">
-                    <a id='kakao-login-btn'></a>
+                    <a id='kakao-login-btn' style={{textAlign : 'center'}}></a>
                 </div>
              </footer>
         );

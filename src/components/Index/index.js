@@ -11,7 +11,7 @@ export default class Index extends PureComponent{
         return(
                 <section>
                     <div className="container">
-                        <div className="image-bg-fluid-height">
+                        <div className="image-bg-fluid-height marign_bottom_little">
                             <img className="img-responsive img-center" src="./images/logo_3x.png" alt=""/>
                         </div>
                         <div className="row">

@@ -47,7 +47,7 @@ class TimeListContainer extends Component{
             <div>
                 <Title
                     title={'내 타임피커'}
-                    content={'Time Picker는 가장 편하게 약속시간을 결정할 수 있게 도와줍니다.'}
+                    content={''}
                     />
                 <div className='container'>
                     <div className='row'>
@@ -58,7 +58,7 @@ class TimeListContainer extends Component{
                 </div>
                 <footer>
                    <div className="navbar-fixed-bottom">
-                        <Link to ='/form'><h1 className="section-heading text-center">새로운 타임피커 만들기</h1></Link>
+                        <Link to ='/form'><h1 className="section-heading button_content">새로운 타임피커 만들기</h1></Link>
                    </div>
                  </footer>
             </div>
