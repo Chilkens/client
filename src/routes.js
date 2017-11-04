@@ -1,11 +1,11 @@
 import React, { PureComponent } from 'react';
-import {Router, Route, browserHistory, IndexRoute} from 'react-router';
+import {Router, Route, browserHistory, IndexRoute, Redirect} from 'react-router';
 
 import {IndexContainer, TimeListContainer} from './containers';
 import {MakeTimeTableContainer, SelectTimeContainer} from './containers';
 import {CommonTimeContainer, EnableTimeContainer} from './containers';
 //import {FailListContainer} from './containers';
-import {Share} from './components';
+import {Share, NotFound} from './components';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './style.css';
@@ -23,6 +23,8 @@ class routes extends PureComponent{
                     <Route path='share/:id' component={Share} />
                     <Route path='common/:id' component={CommonTimeContainer} />
                     <Route path='enable/:id' component={EnableTimeContainer} />
+                    <Route path='/404' component={NotFound} />
+                    <Redirect from='*' to='/404' />
                 </Route>
             </Router>
         );

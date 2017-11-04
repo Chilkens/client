@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import {Redirect} from 'react-router';
 import Moment from 'moment';
+
 
 import { Title, TimeSelect } from '../components';
 import { getTimeTableByUrl } from '../lib/toServer';

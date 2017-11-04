@@ -29,7 +29,6 @@ class EnableTimeContainer extends Component{
         .then((response) => {
 
             if(response.data.intersection){
-                console.log(response.data);
                 this.setState({
                     title : response.data.title,
                     intersection : response.data.intersection,
