@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Title, FormElement, FormTitle } from '../components';
 import {SaveTimeTable} from '../lib/toServer';
-import { START_DATE, END_DATE } from 'react-dates/constants';
 import moment from 'moment';
 
 class MakeTimeTableContainer extends Component {

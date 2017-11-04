@@ -1,4 +1,4 @@
-import React, {PureComponent, PropTypes} from 'react';
+import React, {PureComponent} from 'react';
 
 import './style.css';
 
@@ -15,9 +15,4 @@ export default class Title extends PureComponent{
             </div>
         );
     }
-}
-
-Title.propTypes = {
-    title : PropTypes.string.isRequired,
-    content : PropTypes.string.isRequired,
 }

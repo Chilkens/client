@@ -5,7 +5,7 @@ export default class ListItem extends PureComponent{
     render(){
         return(
 
-            <a href="#" className="list-group-item list-group-item-action flex-column align-items-start">
+            <a href="" className="list-group-item list-group-item-action flex-column align-items-start">
                 <div className="d-flex w-100 justify-content-between">
                     <small className='pull-right item_condition'>진행중</small>
                     <h4 className="mb-1 item_header">{this.props.title}</h4>

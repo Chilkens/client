@@ -17,7 +17,7 @@ class Login extends PureComponent{
                                  <h3 className="panel-title">접속해 주세요</h3>
                              </div>
                              <div className="panel-body">
-                                 <form role="form">
+                                 <form>
                                      <fieldset>
                                          <div className="form-group">
                                              <input className="form-control" placeholder="E-mail" name="email" type="email" autoFocus />

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-    const kUrl = 'http://13.124.209.117';
+const kUrl = 'http://13.124.209.117';
 
 export function SaveTimeTable(timeTableData){
 

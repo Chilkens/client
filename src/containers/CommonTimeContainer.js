@@ -32,14 +32,10 @@ export default class CommonTimeContainer extends PureComponent {
         })
         .catch((error) => console.log(error));
   }
+  
   changeBodyColor(){
       document.getElementsByTagName('body')[0].className = 'body_color_skyblue_gradient';
   }
-
-  changeBodyColor(){
-      document.getElementsByTagName('body')[0].className = 'body_color_skyblue_gradient';
-  }
-
 
   render() {
 

@@ -6,7 +6,7 @@ class FormTitle extends PureComponent{
 		return(
 
 			<div className='container'>
-				<form role="form">
+				<form>
 						<fieldset>
 								<div className="form-group">
 									<h5 className="form_header white-letter">모임 이름</h5>

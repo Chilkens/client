@@ -72,7 +72,7 @@ class SelectTimeContainer extends Component {
         let currentDate = Moment(this.state.timeTable.start);
         for(let timeDiff = 1; timeDiff <= this.state.timeDiff + 1; timeDiff++){
 
-            let oneDay = new Object();
+            let oneDay = {};
             oneDay[currentDate.format().split("T")[0]] = [];
             timeSelectList.push(Object.assign({}, oneDay));
             currentDate = currentDate.add(1, 'day');

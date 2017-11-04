@@ -8,12 +8,15 @@ class TimeTableItem extends PureComponent{
         return(
 
             <div className="list-group">
+
                 {this.props.timeList.map((item) => {
-                    let period = `${item.timetable.start} ~ ${item.timetable.end}`
+                    let period = `${item.timetable.start} ~ ${item.timetable.end}`;
                     return(
                         <TimeItem
                             key={item.timetable.tableId}
                             title={item.timetable.title.slice(0, 22)}
+                            url={this.props.selectUrl}
+                            keyUrl={item.timetable.keyUrl}
                             period={period}
                             member={item.pickName}
                         />

@@ -38,10 +38,12 @@ class TimeListContainer extends Component{
     }
 
     changeBodyColor(){
-        document.getElementsByTagName('body')[0].className = 'body_color_purple_gradient';
+        document.getElementsByTagName('body')[0].className = 'body_color_skyblue_gradient';
     }
 
     render(){
+
+        let selectUrl = window.location.href.replace('list', 'common');
 
         return(
             <div>
@@ -53,6 +55,7 @@ class TimeListContainer extends Component{
                     <div className='row'>
                         <TimeTableItem
                             timeList={this.state.timeList}
+                            selectUrl={selectUrl}
                         />
                     </div>
                 </div>

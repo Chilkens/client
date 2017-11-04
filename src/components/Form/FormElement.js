@@ -1,27 +1,21 @@
 import React, { PureComponent } from 'react';
 import { DateRangePicker } from 'react-dates';
 import { END_DATE } from 'react-dates/constants';
-import { Link } from 'react-router';
+
 import 'react-dates/lib/css/_datepicker.css';
-import moment from 'moment';
 
 
 class FormElement extends PureComponent{
-	constructor(props) {
-		super(props);
-	}
 
 	render() {
+
 		const maximumNights = 6;
-		let isOutsideRange;
+		let isOutsideRange = function(){};
 		if(this.props.startDate) {
 			isOutsideRange = day => (
 				this.props.focusedInput === END_DATE && (day.isBefore(this.props.startDate) || day.isAfter(this.props.startDate.clone().add(maximumNights, 'days')))
 			);
 		}
-		let widthStyle ={
-			height : '300px'
-		};
 
 		return(
 			<div>
@@ -64,8 +58,7 @@ class FormElement extends PureComponent{
 							/>
 						</div>
 					<br />
-					<div style={widthStyle}>
-					</div>
+
 				</div>
 
 				<footer>

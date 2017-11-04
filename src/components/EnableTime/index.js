@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import SecondList from './SecondList';
+
 
 export default class EnableTime extends PureComponent {
 
@@ -12,7 +12,7 @@ export default class EnableTime extends PureComponent {
 
         return(
             <div>
-                <a href="#" className="list-group-item list-group-item-action flex-column align-items-start">
+                <a href="" className="list-group-item list-group-item-action flex-column align-items-start">
                     <div className="d-flex w-100 justify-content-between">
                         <small className='pull-right'>완료</small>
                         <h4 className="mb-1">{this.props.title.slice(0, 22)}</h4>

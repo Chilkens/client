@@ -17,7 +17,7 @@ class EnableTimeContainer extends Component{
             hasIntersection : false,
         };
     }
-    
+
     componentWillMount(){
         this.changeBodyColor();
     }
@@ -38,7 +38,7 @@ class EnableTimeContainer extends Component{
             }else{
                 this.setState({
                     hasIntersection : false,
-                })
+                });
             }
 
         })
@@ -91,7 +91,7 @@ class EnableTimeContainer extends Component{
         </div>
       );
 
-
+      /*
       const completeConfirmView = (
         <div>
             <div className='jumbotron jumbotron-fluid'>
@@ -116,7 +116,7 @@ class EnableTimeContainer extends Component{
            </footer>
         </div>
       );
-
+      */
       if(this.state.hasIntersection){
           return(
               hasIntersectionView

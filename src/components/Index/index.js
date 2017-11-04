@@ -1,7 +1,5 @@
 import React, {PureComponent} from 'react';
 
-import {Link} from 'react-router';
-
 import './style.css';
 
 export default class Index extends PureComponent{
